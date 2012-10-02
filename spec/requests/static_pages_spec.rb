@@ -15,7 +15,7 @@ describe "Static pages" do
     it "should have the header 'Help Page'" do
       visit '/static_pages/help'
       page.should have_selector('h1', :text => 'Help Page')
-      page.should have_selector('title', :text => 'Ruby on Rails Tutorial | Help Page')
+      page.should have_selector('title', :text => 'Ruby on Rails Training | Help Page')
     end
   end
 
