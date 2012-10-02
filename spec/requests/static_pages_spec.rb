@@ -24,6 +24,11 @@ describe "Static pages" do
       visit '/static_pages/about'
       page.should have_content('About Us')
     end
+
+    it "should have the header 'About us'" do
+      visit '/static_pages/about'
+      page.should have_selector('h1', :text => 'About Us')
+    end
   end
 
   describe "Contact page" do
