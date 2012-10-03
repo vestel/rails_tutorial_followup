@@ -1,6 +1,14 @@
-        <h1>Sample App</h1>
-        <h1>This is my Home Page</h1>
-        <p>This page is made as part of Ruby/Rails training (<a href="http://ruby.railstutorial.org/chapters/static-pages#code-home_page_passing">Listing 3.10</a>)</p>
-        <p>Page layout been updated to fit paragraph 3.3.2</p>
-        <p>Embedded Ruby code in view in paragraph 3.3.3</p>
-        <p>Updated - remove code duplication (Paragraph 3.3.4)</p>
+<div class="center hero-unit">
+  <h1>Training App</h1>
+
+  <h2>This is my Home Page</h2>
+  <p>This page is made as part of Ruby/Rails training (<a href="http://ruby.railstutorial.org/chapters/static-pages#code-home_page_passing">Listing 3.10</a>)</p>
+  <p>Page layout been updated to fit paragraph 3.3.2</p>
+  <p>Embedded Ruby code in view in paragraph 3.3.3</p>
+  <p>Updated - remove code duplication (Paragraph 3.3.4)</p>
+
+  <p><%= link_to "Sign up now", '#', class: "btn btn-large btn-primary" %></p>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+
