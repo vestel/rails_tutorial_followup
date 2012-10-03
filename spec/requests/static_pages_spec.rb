@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe "Static pages" do
-
   describe "Home page" do
     it "should have the content 'TrainingApp'" do
       visit '/static_pages/home'
@@ -20,7 +19,6 @@ describe "Static pages" do
   end
 
   describe "Help page" do
-
     it "should have the header 'Help Page'" do
       visit '/static_pages/help'
       page.should have_selector('h1', :text => 'Help Page')
@@ -34,7 +32,7 @@ describe "Static pages" do
       page.should have_content('About Us')
     end
 
-    it "should have the header 'About us'" do
+    it "should have the header 'About Us'" do
       visit '/static_pages/about'
       page.should have_selector('h1', :text => 'About Us')
     end
