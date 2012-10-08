@@ -41,6 +41,7 @@ group :test do
   gem 'libnotify', '0.5.9'
 #  gem 'rb-fsevent', '0.9.1', :require => false
 #  gem 'growl', '1.0.3'
+  gem 'factory_girl_rails', '4.1.0'
 end
 
 # To use ActiveModel has_secure_password
