@@ -14,7 +14,7 @@ require 'spec_helper'
 describe User do
   before do
     @user = User.new(name: "Example User", email: "user@example.com",
-                    password: "foobar", password_confirmation: "foobar") 
+                    password: "foobar", password_confirmation: "foobar")
   end
 
   subject { @user }
@@ -58,7 +58,7 @@ describe User do
       addresses.each do |invalid_address|
         @user.email = invalid_address
         @user.should_not be_valid
-      end      
+      end
     end
   end
 
@@ -68,7 +68,7 @@ describe User do
       addresses.each do |valid_address|
         @user.email = valid_address
         @user.should be_valid
-      end      
+      end
     end
   end
 
@@ -77,11 +77,11 @@ describe User do
     before { @user.password = @user.password_confirmation = " " }
     it { should_not be_valid }
   end
-  
+
   describe "when password doesn't match confirmation" do
     before { @user.password_confirmation = "mismatch" }
     it { should_not be_valid }
-  end 
+  end
 
   describe "when password confirmation is nil" do
     before { @user.password_confirmation = nil }
@@ -121,4 +121,10 @@ describe User do
       @user.reload.email.should == mixed_case_email.downcase
     end
   end
+
+  describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
+
 end
