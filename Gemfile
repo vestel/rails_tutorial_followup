@@ -37,10 +37,10 @@ gem 'jquery-rails', '2.0.2'
 
 group :test do
   gem 'capybara', '1.1.2'
-#  gem 'rb-inotify', '0.8.8'
-#  gem 'libnotify', '0.5.9'
-  gem 'rb-fsevent', '0.9.1', :require => false
-  gem 'growl', '1.0.3'
+  gem 'rb-inotify', '0.8.8'
+  gem 'libnotify', '0.5.9'
+#  gem 'rb-fsevent', '0.9.1', :require => false
+#  gem 'growl', '1.0.3'
 end
 
 # To use ActiveModel has_secure_password
